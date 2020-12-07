@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+
+    <title>Weather</title>
+</head>
+
+<body>
+    <!--Wrapper-->
+    <section class="wrapper">
+        <!--Top Wrapper-->
+        <section class="top-wrapper">
+        
+        <!--Search-->
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search Location"><br>
+            <input type="submit" id="submit" value="Search"><br>
+        </div>
+
+        <!--Temperature unit-->
+        <div id ="temperature-unit"> F° </div>
+        </section>
+        <!--Weather box-->
+        <section class="weather-box">
+            <h2 id="location-value"></h2>
+            <h1 id ='temperature-value'></h1>
+            <div class="min-max">
+            <i></i>
+            <p id ='temperature-max-value'></p>
+            <i></i>
+            <p id ='temperature-min-value'></p>
+            </div>
+        </section>
+        <section class="feels-like">
+            <p id="weather-description"></p>
+            <p id="feels-like-value"></p>
+        </section>
+
+        <!--Weather details-->
+        <section class="weather-details">
+
+            <div class="detail-wrap">
+            <p class='detail' id="sunrise">Sunrise</p>
+            <p class="weather-detail" id="sunrise-value"></p>
+            </div>
+
+            <div class="detail-wrap">
+            <p  class='detail' id="sunset">Sunset</p>
+            <p class="weather-detail" id="sunset-value"></p>
+            </div>
+
+            <div class="detail-wrap">
+                <p  class='detail' id="precipitation">Precipitation</p>
+                <p   class="weather-detail" id="precipitation-value"></p>
+            </div>
+
+            <div class="detail-wrap">
+                <p class='detail' id="wind">Wind</p>
+                <p  class="weather-detail" id="wind-value"></p>
+            </div>
+             
+             <div class="detail-wrap">
+                 <p class='detail' id="humidity">Humidity</p>
+                 <p class="weather-detail" id="humidity-value"></p>
+             </div>
+
+             <div class="detail-wrap">
+                 <p class='detail' id="pressure">Pressure</p>
+                 <p  class="weather-detail" id="pressure-value"></p>
+             </div>
+
+        </section>
+
+        
+    
+
+        </section>
+
+
+
+    </section>
+
+<script type="text/javascript" src="weather.js"></script>
+</body>
+</html>
