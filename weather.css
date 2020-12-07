@@ -56,15 +56,26 @@ p {
 }
 
 /* Search */
-
+.search{
+    display: flex;
+    flex-direction: row;
+    
+}
 #searchInput {
     border: 1px solid grey;
     border-radius: 5px;
     height: 20px;
-    
-    
+    padding:10px;
+    border:none;
     outline: 0;
     background-color: #f5f5f5;
+    margin: 4px;
+  }
+
+  #submit {
+      border:none;
+      padding:5px;
+      border-radius:10px;
   }
 
 /*Temperature unit*/

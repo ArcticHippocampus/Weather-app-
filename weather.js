@@ -107,4 +107,15 @@ document.addEventListener("DOMContentLoaded", firstSearch())
 submitBtn.addEventListener("click", search);
 temperatureUnit.addEventListener("click", unitChange);
 
+searchInput.addEventListener("keyup", function(event) {
+    
+    if (event.keyCode === 13) {
+     
+      event.preventDefault();
+      
+      submitBtn.click();
+    }
+
+  });
+
 
