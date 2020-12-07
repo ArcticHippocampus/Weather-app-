@@ -5,9 +5,19 @@
         max-width: 50%;
         max-height: 50%;
         margin: auto;
+
         
     }
-    
+
+    #submit {
+      border:none;
+     
+      
+  }
+
+  #searchInput {
+   
+  }
        
     }
 
@@ -29,7 +39,7 @@ p {
 }
 
 .wrapper {
-    background: rgb(255,143,15);
+    
     background: linear-gradient(0deg, rgba(255,143,15,1) 0%, rgba(252,185,49,1) 100%);
     padding: 1.4rem;
     
@@ -54,7 +64,11 @@ p {
 
 
 }
-
+.weather-box i {
+    margin:10px;
+    margin-top:15px;
+    color: rgba(255, 255, 255, 0.596);
+}
 /* Search */
 .search{
     display: flex;
@@ -62,20 +76,17 @@ p {
     
 }
 #searchInput {
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 20px;
-    padding:10px;
+    
+    
     border:none;
     outline: 0;
-    background-color: #f5f5f5;
-    margin: 4px;
+
   }
 
   #submit {
       border:none;
-      padding:5px;
-      border-radius:10px;
+      background-color: white;
+      
   }
 
 /*Temperature unit*/

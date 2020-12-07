@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e76ca3d9c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="weather.css">
 
     <title>Weather</title>
@@ -12,14 +13,14 @@
 
 <body>
     <!--Wrapper-->
-    <section class="wrapper">
+    <section id='wrapper'class="wrapper">
         <!--Top Wrapper-->
         <section class="top-wrapper">
         
         <!--Search-->
         <div class="search">
-            <input type="text" id="searchInput" placeholder="Search Location"><br>
-            <input type="submit" id="submit" value="Search"><br>
+            <input type="text" id="searchInput" placeholder="Search location...">
+            <button type="submit" id="submit"><i class="fa fa-search"></i></button>
         </div>
 
         <!--Temperature unit-->
@@ -30,10 +31,11 @@
             <h2 id="location-value"></h2>
             <h1 id ='temperature-value'></h1>
             <div class="min-max">
-            <i></i>
+            <i class="fas fa-angle-up"></i>
             <p id ='temperature-max-value'></p>
-            <i></i>
+            <i class="fas fa-angle-down"></i>
             <p id ='temperature-min-value'></p>
+            
             </div>
         </section>
         <section class="feels-like">

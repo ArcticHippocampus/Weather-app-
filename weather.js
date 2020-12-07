@@ -1,5 +1,6 @@
 const searchInput = document.getElementById('searchInput'); 
 const submitBtn = document.getElementById('submit');
+const wrapper = document.getElementById('wrapper');
 const temperatureUnit = document.getElementById('temperature-unit');
 const city = document.getElementById('location-value');
 const temperature = document.getElementById('temperature-value');
@@ -14,6 +15,7 @@ const pressure = document.getElementById('pressure-value');
 const feelsLike = document.getElementById('feels-like-value');
 const weatherDescription = document.getElementById('weather-description')
 
+console.log(wrapper);
 let tempF;
 let tempMinF;
 let tempMaxF;
@@ -50,7 +52,10 @@ let unit = 'fahrenheit'
         console.log(tempFeelsLIke)
         
         city.innerHTML = file.name;
-        weatherDescription.innerHTML = file.weather[0].description;
+        weatherDescription.innerHTML = file.weather[0].main;
+        let weatherState = file.weather[0].main;
+        backgroundChange(weatherState);
+        console.log(weatherState);
         
 
         render(tempF, tempMinF, tempMaxF, tempFeelsLIke, )
@@ -66,6 +71,9 @@ let unit = 'fahrenheit'
         wind.innerHTML = file.wind.speed + 'km/h';
         humidity.innerHTML = file.main.humidity + '%';
         pressure.innerHTML = file.main.pressure + 'hPa';
+        precipitation.innerHTML = '50%'
+
+
 
        });
     
@@ -99,6 +107,33 @@ function searchUnit(){
     if(unit === 'celcius'){
         temperatureUnit.innerHTML =  'F °'
         unit = 'fahrenheit'
+    }
+
+}
+
+function backgroundChange(description){
+
+    if(description === 'Few clouds') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(122,19,38,1) 0%, rgba(218,94,84,1) 100%)'
+    }
+    else if(description === 'Fog') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(108,118,120,1) 0%, rgba(255,255,243,1) 100%)'
+        console.log('fog!')
+    }
+    else if(description === 'Mist') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(122,19,38,1) 0%, rgba(218,94,84,1) 100%)'
+    }
+    else if(description === 'Rain') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(51,89,171,1) 0%, rgba(109,156,213,1) 100%)'
+    }
+    else if(description === 'Storm') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(122,19,38,1) 0%, rgba(218,94,84,1) 100%)'
+    }
+    else if(description === 'Clear') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(82,182,249,1) 0%, rgba(115,186,225,1) 100%)'
+    }
+    else if(description === 'Clouds') {
+        wrapper.style.background = 'linear-gradient(0deg, rgba(82,182,249,1) 0%, rgba(115,186,225,1) 100%)'
     }
 
 }
