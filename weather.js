@@ -1,3 +1,5 @@
+
+
 const searchInput = document.getElementById('searchInput'); 
 const submitBtn = document.getElementById('submit');
 const wrapper = document.getElementById('wrapper');
@@ -121,7 +123,7 @@ function backgroundChange(description){
         console.log('fog!')
     }
     else if(description === 'Mist') {
-        wrapper.style.background = 'linear-gradient(0deg, rgba(122,19,38,1) 0%, rgba(218,94,84,1) 100%)'
+        wrapper.style.background = 'linear-gradient(90deg, rgba(183,189,230,1) 0%, rgba(242,207,235,1) 35%)'
     }
     else if(description === 'Rain') {
         wrapper.style.background = 'linear-gradient(0deg, rgba(51,89,171,1) 0%, rgba(109,156,213,1) 100%)'
